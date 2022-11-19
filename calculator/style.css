@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+}
+
+body, html{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items:center;
+    height: 80%;
+    width: 30%;
+    
+    
+    border: 2px solid black;
+    border-radius: 4px;
+   
+}
+
+.display{
+    border: 2px solid black;
+    width: 90%;
+    height: 25%;
+    border-radius: 4px;
+}
+
+.button{
+    border: 2px solid black;
+    width: 90%;
+    height: 60%;
+   display: flex;
+   flex-direction: column;
+   justify-content:space-around;
+   align-items:center;
+   border-radius: 4px;
+
+   
+}
+.input{
+    /* border: 2px solid yellow; */
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 95%;
+    height: 75%;
+
+}
+
+.btn{
+    border: 2px solid black;
+}
+
+.number{
+    /* border: 2px solid pink; */
+    height: 97%;
+    width: 70%;
+    margin: 2px 2px;
+    display: grid;
+    grid-template-columns: repeat( 3, auto);
+    gap: 2px;
+    
+}
+
+#btn0{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.operator{
+    /* border: 2px solid blueviolet; */
+    height: 97%;
+    width: 30%;
+    margin: 2px 2px;
+   display: grid;
+   grid-template-columns: repeat(1, auto);
+   gap: 2px;
+    
+}
+
+.equal{
+    /* border: 2px solid green; */
+    width: 95%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+
+}
+
+#equal{
+    width: 65%;
+    height: 95%;
+    
+}
+
+.btn-c{
+    width: 25%;
+    height: 95%;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Kanit', sans-serif;
+    border-radius: 2px;
+
+}
+
+.txt-op{
+    
+    font-size: 2rem;
+}
