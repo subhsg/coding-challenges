@@ -1,0 +1,23 @@
+#main{
+   height: 500px;
+}
+
+#btn{
+     margin-left: 20px ;
+}
+#text{
+    border: 2px solid black;
+    width:50%
+}
+.div{
+    display:flex;
+    justify-content:space-between ;
+
+}
+.remove{
+    width:80px;
+}
+.done{
+    width:80px;
+}
+
