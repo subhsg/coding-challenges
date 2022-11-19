@@ -1,0 +1,37 @@
+body{
+    /* display: flex; */
+    
+    
+}
+#img{
+    /* //transform: translate(-50%,-50%); */
+    
+    margin-left:33%;
+    margin-top: 2%;
+    display: inline-block;
+    
+  
+}
+#on{
+    height: 50px;
+    width:100px;
+    border: 2px solid black;
+    justify-content: center;
+    background-color: rgb(230, 171, 171);
+    /* margin-left:50%; */
+    margin-left: 50%;
+    display: block;
+   
+
+}
+
+#off{
+    height: 50px;
+    width:100px;
+    border: 2px solid black;
+    justify-content: center;
+    background-color: rgb(230, 171, 171);
+    margin-left: 50%;
+    margin-top: 2%;
+
+}
