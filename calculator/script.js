@@ -1,5 +1,6 @@
 let btn = document.getElementsByClassName('btn');
 
+
 let displayElement = document.getElementsByClassName('display')[0];
 
 // eventListener
@@ -15,7 +16,10 @@ document.addEventListener('click', (e) => {
         } 
         else if(txt==="C"){
             erase();
+        displayElement.classList.add('font-size');
+        displayElement.classList.remove('answer');
         }
+        
         else {
             display(txt);
 
@@ -28,6 +32,7 @@ document.addEventListener('click', (e) => {
 function operation() {
 
     let answer = eval(displayElement.innerText);
+    
     erase();
 
     if(!isFinite(answer)){
@@ -35,8 +40,21 @@ function operation() {
          window.alert("Please give Valid Values.");
     }
     else{
+        let str= answer.toString();
+        if(str.includes(".")){
+            if(str.length>="8"){
+                
 
+                answer=answer.toFixed(8);
+                answer=parseFloat(answer);
+            }
+        }
+        
         display(answer);
+        displayElement.classList.remove('font-size');
+        displayElement.classList.add('answer');
+        
+
     }
 
 
@@ -54,3 +72,5 @@ function display(txt) {
 function erase(){
     displayElement.innerText = "";
 }
+
+
