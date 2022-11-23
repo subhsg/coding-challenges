@@ -3,14 +3,26 @@ let btn = document.getElementsByClassName('btn');
 
 let displayElement = document.getElementsByClassName('display')[0];
 
+
+
 // eventListener
 
 document.addEventListener('click', (e) => {
     let txt = e.target.innerText;
+    
     if (e.target.classList.contains("btn")) {
 
         if (txt === "=") {
-
+            if(displayElement.innerText.endsWith("+")||displayElement.innerText.endsWith("-")||displayElement.innerText.endsWith("*")||displayElement.innerText.endsWith("/")){
+                displayElement.innerText="Enter another number first"
+                displayElement.classList.add('font-size');
+                displayElement.classList.remove('answer');
+                
+            }
+        
+            
+            
+            
             operation();
 
         } 
@@ -19,9 +31,18 @@ document.addEventListener('click', (e) => {
         displayElement.classList.add('font-size');
         displayElement.classList.remove('answer');
         }
+        else if (displayElement.innerText.charAt(0)==="+"||displayElement.innerText.charAt(0)==="-"||displayElement.innerText.charAt(0)==="*"|| displayElement.innerText.charAt(0)==="/"){
+            displayElement.innerText="Enter a number first"
+            displayElement.classList.add('font-size');
+            displayElement.classList.remove('answer');
+        }
+        
+
         
         else {
             display(txt);
+            displayElement.classList.add('font-size');
+            displayElement.classList.remove('answer');
 
         }
     }
@@ -32,6 +53,7 @@ document.addEventListener('click', (e) => {
 function operation() {
 
     let answer = eval(displayElement.innerText);
+   
     
     erase();
 
@@ -39,6 +61,9 @@ function operation() {
         
          window.alert("Please give Valid Values.");
     }
+    // else if (displayElement.innerText.charAt(0)==="+"){
+    //           console.log("invalid");
+    // }
     else{
         let str= answer.toString();
         if(str.includes(".")){
@@ -51,8 +76,11 @@ function operation() {
         }
         
         display(answer);
+        
         displayElement.classList.remove('font-size');
         displayElement.classList.add('answer');
+        
+
         
 
     }
@@ -72,5 +100,3 @@ function display(txt) {
 function erase(){
     displayElement.innerText = "";
 }
-
-
