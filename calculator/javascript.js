@@ -51,7 +51,7 @@ function inputHandler(inputStr, txt) {
     let opr = matchedArr[0][2];
     // console.log(num1,num2)
     let calcValue = operation(num1, num2, opr);
-    console.log(typeof(calcValue));
+    //console.log(typeof(calcValue));
     let str= calcValue.toString();
     if(str.includes(".")){
         if(str.length>="8"){
@@ -137,12 +137,12 @@ function operators(){
     let lastElement=strr.slice(-1);
     let secondLastElement=strr.slice(-2,-1);
     if(lastElement===secondLastElement){
-        console.log("same")
+        //console.log("same")
         displayElement.innerText=strr.slice(0,(len-1));
         
     }
     else{
-      console.log("different")
+      //console.log("different")
       if(secondLastElement==="+"||secondLastElement==="-"||secondLastElement==="*"||secondLastElement==="/"){
       displayElement.innerText =strr.slice(0,(len-2)).concat(lastElement);
       }
@@ -159,7 +159,7 @@ function decimalPoint(){
     let lastElement=strr.slice(-1);
     let secondLastElement=strr.slice(-2,-1);
     if(lastElement==="." && secondLastElement==="."){
-        console.log("same")
+        //console.log("same")
         displayElement.innerText=strr.slice(0,(len-1));
         
     }
