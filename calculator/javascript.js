@@ -44,7 +44,7 @@ function inputHandler(inputStr, txt) {
     inputStr = inputStr.slice(0,inputStr.length-1);
     let matchedArr = [...inputStr.matchAll(/(-?\d*\.?[0-9]+)([\*\+\-\/])(\d*\.?[0-9]+)/g)];
     if(matchedArr.length === 0) return displayElement.innerText
-    console.log(matchedArr)
+    //console.log(matchedArr)
    
     let num1 = Number(matchedArr[0][1]);
     let num2 = Number(matchedArr[0][3]);
